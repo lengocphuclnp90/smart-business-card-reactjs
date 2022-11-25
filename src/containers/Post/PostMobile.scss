@@ -1,0 +1,50 @@
+@media only screen and (max-width: 1200px) {
+    .post {
+        margin-top: 90px;
+        width: 100%;
+        max-width: 100vh;
+        min-height: 100vh;
+        padding: 50px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .post-box {
+            width: 100%;
+            background-color: #f7f6fb;
+            border-radius: 10px;
+            padding: 20px;
+
+            .title {
+                text-align: center;
+                width: 100%;
+                font-weight: bold;
+                font-size: 25px;
+                color: black;
+                padding: 10px;
+            }
+
+            .t1 {
+                font-size: 18px;
+                font-weight: bold;
+                padding: 5px;
+            }
+
+            .youtube {
+                width: 100%;
+                max-width: 100vh;
+                padding: 10px 0px;
+                display: flex;
+                flex-direction: column !important;
+                align-items: center;
+                gap: 30px;
+
+                iframe {
+                    border-radius: 10px;
+                    width: 100% !important;
+                }
+            }
+
+        }
+    }
+}

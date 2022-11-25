@@ -1,0 +1,55 @@
+@media only screen and (max-width: 1200px) {
+    .card-manage-user {
+        display: none;
+    }
+
+    .card-manage-user-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+
+        select {
+            width: 100%;
+            padding: 20px;
+            outline: none;
+            border-radius: 20px;
+            border: 1px solid rgb(216, 216, 216);
+            font-size: 17px;
+            font-weight: bold;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+
+        .left-footer {
+            background-color: white;
+            border-radius: 20px;
+            border: 1px solid #e6e6ff;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            gap: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            .footer-content {
+                b {
+                    margin-left: 7px;
+                    font-size: 15px;
+                }
+
+                text-align: center;
+            }
+
+        }
+
+        .card-content-right {
+            width: 100%;
+        }
+    }
+}

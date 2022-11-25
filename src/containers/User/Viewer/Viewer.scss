@@ -1,0 +1,182 @@
+.viewer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    .viewer-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px 10px;
+
+        .viewer-title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .viewer-tool {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+
+            .tool-content {
+                padding-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+
+                .vtitle {
+                    padding-right: 5px;
+                    font-weight: bold;
+                }
+
+                .vinput {
+                    select {
+                        outline: none;
+                        border: 1px solid #919191;
+                        padding: 10px 20px;
+                        width: 190px;
+                        border-radius: 10px;
+                    }
+
+                    input {
+                        outline: none;
+                        border: 1px solid #919191;
+                        padding: 10px 20px;
+                        width: 260px;
+                        border-radius: 10px;
+
+                    }
+                }
+
+                .vsubmit {
+                    cursor: pointer;
+                    padding: 5px 25px;
+                    font-size: 20px;
+                    background-color: rgb(0, 0, 129);
+                    color: white;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background-color: rgb(1, 1, 255);
+                    }
+                }
+
+                .vrefect {
+                    cursor: pointer;
+                    padding: 5px 15px;
+                    font-size: 20px;
+                    background-color: rgb(1, 99, 3);
+                    color: white;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background-color: rgb(1, 198, 4);
+                    }
+                }
+
+                .vdelete {
+                    cursor: pointer;
+                    padding: 5px 15px;
+                    font-size: 20px;
+                    background-color: rgb(129, 0, 0);
+                    color: white;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background-color: rgb(255, 1, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    .viewer-body {
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        border-radius: 20px;
+        border: 1px solid #e6e6ff;
+
+        table {
+            width: 100%;
+            margin-top: 10px;
+
+            tbody {
+                tr {
+                    height: 37px;
+
+                    .table-title {
+                        font-weight: bold;
+                        font-size: 17px;
+                    }
+
+                    .center {
+                        text-align: center;
+                    }
+
+                    .hide {
+                        color: rgb(186, 4, 4);
+                    }
+
+                    &:hover {
+                        background: linear-gradient(100deg, rgba(255, 255, 255, 0.142), rgba(0, 252, 244, 0.268), rgba(255, 255, 255, 0.214))
+                    }
+
+                    i {
+                        color: red;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .show-more {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            gap: 50px;
+            cursor: pointer;
+
+            .next {
+                &:hover {
+                    color: #00b994;
+                }
+            }
+
+            .pre {
+                &:hover {
+                    color: red;
+                }
+            }
+
+            .default {
+                &:hover {
+                    color: gold;
+                }
+            }
+        }
+    }
+}
+
+.viewer-mobile {
+    display: none;
+}

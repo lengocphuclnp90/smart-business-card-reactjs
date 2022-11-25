@@ -1,0 +1,333 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import './Location.scss';
+
+import { toast } from "react-toastify";
+import _, { get } from 'lodash';
+import { adminDashboardService } from '../../../../services/adminMenuService';
+import { getListService, updateInfoService } from '../../../../services/userService'
+import { isTypeNode } from 'typescript';
+
+class Location extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            get_runing: true,
+            arrInfo: [],
+            total: 0,
+
+            step_number: 5,
+            default_number: 10,
+            number: 10,
+            more_type: 'get',
+
+            filter_runing: false,
+            list_filter: '',
+            hide_filter: '',
+            name_filter: '',
+
+            filterId_runing: false,
+
+        }
+    }
+    componentDidMount() {
+        this.getInfo();
+        this.getTotal();
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+
+    }
+    getTotal = async () => {
+        let newInfo = {
+            table: 'location',
+            type: 'total',
+        }
+        let total = await adminDashboardService(newInfo);
+        if (total) {
+            this.setState({
+                total: total
+            })
+        }
+    }
+    handleOnChangeInput = (event, id) => {
+        let copyState = { ...this.state };
+        copyState[id] = event.target.value;
+        this.setState({
+            ...copyState
+        })
+    }
+    // Ham load du lieu
+    getInfo = async () => {
+        if (this.state.filter_runing === true) {
+            await this.setState({
+                number: this.state.default_number,
+                get_runing: !this.state.get_runing,
+                filter_runing: !this.state.filter_runing,
+                filterId_runing: false,
+                list_filter: '',
+                hide_filter: '',
+                name_filter: '',
+            })
+        }
+        let newInfo = {
+            table: 'location',
+            type: 'get',
+            number: this.state.number
+        }
+        let res = await adminDashboardService(newInfo);
+        if (res && res.err) {
+            toast.error("Server trả về mã lỗi !");
+        } else {
+            await this.setState({
+                arrInfo: res,
+                more_type: 'get',
+                filterId_runing: false,
+            })
+        }
+    }
+    filter = async () => {
+        if (this.state.get_runing === true) {
+            await this.setState({
+                number: this.state.default_number,
+                get_runing: !this.state.get_runing,
+                filter_runing: !this.state.filter_runing,
+                filterId_runing: false,
+            })
+        }
+        let data = {
+            type: 'filter',
+            table: 'location',
+            number: this.state.number,
+            hide_filter: this.state.hide_filter,
+            name_filter: this.state.name_filter,
+            list_filter: this.state.list_filter,
+        }
+        let res = await adminDashboardService(data);
+        if (res && res.err) {
+            toast.error("Đã xảy ra lỗi !!!");
+        } else {
+            this.setState({
+                arrInfo: res,
+                more_type: 'filter'
+            })
+        }
+    }
+    filterId = async (user) => {
+        let newInfo = {
+            table: 'location',
+            type: 'get',
+            user: user,
+        }
+        let res = await updateInfoService(newInfo);
+        if (res && res.err) {
+            if (res.err === 'NOT') {
+
+            } else {
+                toast.error("Server trả về mã lỗi !");
+            }
+        } else {
+            this.setState({
+                arrInfo: res,
+                filterId_runing: true
+            })
+        }
+    }
+    // thao tac
+    deleteInfo = async (item) => {
+        let newInfo = {
+            table: 'location',
+            type: 'delete',
+            id: item.id,
+            user: item.user,
+        }
+        let res = await updateInfoService(newInfo);
+        if (res && res.err) {
+            toast.error("Đã xảy ra lỗi !");
+        } else {
+            await this.getInfo();
+            toast.success("Xóa thông tin thành công !");
+        }
+    }
+    // hien an form
+    hideForm = (event) => {
+        if (event.target.id === 'form-info') {
+            this.setState({
+                showForm: !this.state.showForm
+            })
+        }
+    }
+
+    showMore = async (type) => {
+        let more_type = this.state.more_type;
+        if (type === 'default') {
+            this.setState({
+                number: this.state.default_number,
+            }, async () => {
+                if (more_type === 'get') {
+                    this.getInfo();
+                } else if (more_type === 'filter') {
+                    await this.filter();
+                }
+            })
+        } else if (type === 'next') {
+            this.setState({
+                number: this.state.number + this.state.step_number
+            }, async () => {
+                if (more_type === 'get') {
+                    await this.getInfo();
+                } else if (more_type === 'filter') {
+                    await this.filter();
+                }
+                if ((this.state.number - this.state.arrInfo.length) > this.state.step_number) {
+                    this.setState({
+                        number: this.state.number - this.state.step_number
+                    })
+                }
+            })
+        } else {
+            if (this.state.number > this.state.default_number) {
+                this.setState({
+                    number: this.state.number - this.state.step_number
+                }, async () => {
+
+                    if (more_type === 'get') {
+                        await this.getInfo();
+                    } else if (more_type === 'filter') {
+                        await this.filter();
+                    }
+                })
+            }
+        }
+
+    }
+
+    render() {
+        let arrInfo = this.state.arrInfo;
+        return (
+            <React.Fragment>
+                <div className='right-box-content-admin-location'>
+                    <div className='right-header'>
+                        <div className='header-title'>Vị trí đã ghim</div>
+                        <div className='header-tool'>
+                            <div className='tool-content'>
+                                <b>Tình trạng:</b>
+                                <div className='content-select'>
+                                    <select
+                                        onChange={(event) => this.handleOnChangeInput(event, 'hide_filter')}
+                                        value={this.state.hide_filter}
+                                    >
+                                        <option value=''>Tất cả</option>
+                                        <option value='ON'>Đang ẩn</option>
+                                        <option value='OFF'>Hiển thị</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className='tool-content'>
+                                <b>Tên:</b>
+                                <div className='content-input'>
+                                    <input className='filter-input' type='text'
+                                        value={this.state.name_filter}
+                                        onChange={(event) => this.handleOnChangeInput(event, 'name_filter')}
+                                    ></input>
+                                </div>
+                            </div>
+                            <div className='tool-content'>
+                                <div className='btn-filter' onClick={() => this.filter()}><i class="fas fa-filter"></i></div>
+                                <div className='btn-refect' onClick={() => this.getInfo()}><i class="fas fa-redo"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='right-body'>
+                        <div className='body-table-content'>
+                            <div>
+                                Đang hiển thị: <b>{this.state.arrInfo.length}</b>/<b>{this.state.total}</b>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td className='table-title'>UID</td>
+                                        <td className='table-title'>Tên hiển thị</td>
+                                        <td className='table-title'>Liên kết</td>
+                                        <td className='table-title center'>Lượt truy cập</td>
+                                        <td className='table-title center'>Tình trạng</td>
+                                        <td className='table-title center'>Thao tác</td>
+                                    </tr>
+                                    {arrInfo && arrInfo.length > 0 && arrInfo.map((item, index) => {
+                                        return (
+                                            <React.Fragment>
+                                                <tr key={index}>
+                                                    <td className='table-content'
+                                                        onClick={() => this.props.displayUser(item.user)}
+                                                        style={{ cursor: 'pointer' }}
+                                                    >
+                                                        {item.user}
+                                                    </td>
+                                                    <td className='table-content name'>{item.name}</td>
+                                                    <td className='table-content fix'>
+                                                        <a href={item.link} target='_blank'
+                                                        >Mở link <i class="fas fa-external-link-alt"></i></a>
+                                                    </td>
+                                                    <td className='table-content center fix'>{item.view}</td>
+                                                    <td className='table-content center fix'>
+                                                        {item.hide === 'ON' ?
+                                                            <React.Fragment>
+                                                                <i class="fas fa-eye-slash"></i>
+                                                            </React.Fragment>
+                                                            : <React.Fragment>
+                                                                <i class="fas fa-eye"></i>
+                                                            </React.Fragment>
+                                                        }
+
+                                                    </td>
+                                                    <td className='table-content center fix'>
+                                                        <i class="fas fa-user" onClick={() => this.filterId(item.user)}></i>
+                                                        <i class="fas fa-trash-alt" onClick={() => this.deleteInfo(item)}></i>
+                                                    </td>
+                                                </tr>
+                                            </React.Fragment>
+                                        );
+                                    })}
+                                </tbody>
+                            </table>
+                            <div className='show-more'>
+                                {
+                                    this.state.filterId_runing === false ?
+                                        <React.Fragment>
+                                            <div className='pre' onClick={() => this.showMore('pre')}><i class="fas fa-minus"></i> Ẩn bớt</div>
+                                            <div className='default' onClick={() => this.showMore('default')}><i class="fas fa-sync-alt"></i> Mặc định</div>
+                                            <div className='next' onClick={() => this.showMore('next')}> <i class="fas fa-plus"></i> Xem thêm</div>
+                                            <div>
+                                                Đang hiển thị: <b>{this.state.arrInfo.length}</b>/<b>{this.state.total}</b>
+                                            </div>
+                                        </React.Fragment> :
+                                        <React.Fragment>
+                                            <div>Đang hiển thị thông tin của 1 người dùng</div>
+                                        </React.Fragment>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </React.Fragment>
+        );
+    }
+
+}
+
+const mapStateToProps = state => {
+    return {
+        isAdmin: state.user.isAdmin,
+        userInfo: state.user.userInfo,
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+
+    };
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Location));

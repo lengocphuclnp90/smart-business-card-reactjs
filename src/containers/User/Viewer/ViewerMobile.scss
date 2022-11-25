@@ -1,0 +1,219 @@
+@media only screen and (max-width: 1200px) {
+    .viewer {
+        display: none;
+    }
+
+    .viewer-mobile {
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
+        .viewer-header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 20px;
+
+            .viewer-title {
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .viewer-tool {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: space-between;
+                gap: 10px;
+
+                .tool-content {
+                    padding: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 5px;
+                    width: 100%;
+
+                    .vtitle {
+                        padding-right: 5px;
+                        font-weight: bold;
+                    }
+
+                    .vinput {
+                        width: 100%;
+
+                        select {
+                            outline: none;
+                            border: 1px solid #919191;
+                            padding: 10px 20px;
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+
+                        input {
+                            outline: none;
+                            border: 1px solid #919191;
+                            padding: 10px 20px;
+                            width: 100%;
+                            border-radius: 10px;
+
+                        }
+                    }
+
+                    .vtool {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        margin-top: 20px;
+
+                        .vsubmit {
+                            text-align: center;
+                            cursor: pointer;
+                            width: 30%;
+                            padding: 5px 25px;
+                            font-size: 20px;
+                            background-color: rgb(0, 0, 129);
+                            color: white;
+                            border-radius: 10px;
+
+                            &:hover {
+                                background-color: rgb(1, 1, 255);
+                            }
+                        }
+
+                        .vrefect {
+                            text-align: center;
+                            cursor: pointer;
+                            width: 30%;
+                            padding: 5px 15px;
+                            font-size: 20px;
+                            background-color: rgb(1, 99, 3);
+                            color: white;
+                            border-radius: 10px;
+
+                            &:hover {
+                                background-color: rgb(1, 198, 4);
+                            }
+                        }
+
+                        .vdelete {
+                            text-align: center;
+                            width: 20%;
+                            cursor: pointer;
+                            padding: 5px 15px;
+                            font-size: 20px;
+                            background-color: rgb(129, 0, 0);
+                            color: white;
+                            border-radius: 10px;
+
+                            &:hover {
+                                background-color: rgb(255, 1, 1);
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .viewer-body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 15px;
+
+            .body-sub-content {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+                background-color: white;
+                border-radius: 20px;
+                border: 1px solid #e6e6ff;
+                padding: 15px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                .sub-v {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 7px;
+                }
+
+                .sub-tool {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+
+                    .tool-delete {
+                        width: 20%;
+                        text-align: center;
+                        background-color: #5b15ff;
+                        border-radius: 10px;
+                        padding: 5px 0px;
+
+                        i {
+                            color: white;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .show-more {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            padding: 20px;
+
+            .tool-more {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                .next {
+                    &:hover {
+                        color: #00b994;
+                    }
+                }
+
+                .pre {
+                    &:hover {
+                        color: red;
+                    }
+                }
+
+                .default {
+                    &:hover {
+                        color: gold;
+                    }
+                }
+            }
+        }
+    }
+
+}

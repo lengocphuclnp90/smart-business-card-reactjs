@@ -1,0 +1,384 @@
+@media only screen and (max-width: 1200px) {
+    .schedule {
+        display: none;
+    }
+
+    .schedule-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+
+        .schedule-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 0px;
+            width: 100%;
+
+            .schedule-heder-tool {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+                width: 100%;
+                padding: 0px;
+
+                .schedule-header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    border: 1px solid rgb(247, 247, 247);
+
+                    select {
+                        width: 100%;
+                        border-radius: 10px;
+                        padding: 10px 20px;
+                        font-weight: bold;
+                        font-size: 20px;
+                        outline: none;
+                    }
+                }
+
+                .schedule-tool {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 20px;
+                    padding-bottom: 10px;
+
+                    .tool-content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 10px;
+                        width: 100%;
+
+                        b {
+                            font-size: 17px;
+                        }
+
+                        select {
+                            width: 100%;
+                            padding: 10px 20px;
+                            font-size: 15px;
+                            border-radius: 10px;
+                            border: 1px solid rgba(0, 0, 0, 0.311);
+                            outline: none;
+                        }
+
+                        img {
+                            cursor: pointer;
+                            margin-left: 10px;
+                            width: 60px;
+                            height: 40px;
+                            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 10px 20px;
+                            font-size: 15px;
+                            border-radius: 10px;
+                            border: 1px solid rgba(0, 0, 0, 0.296);
+                            outline: none;
+                        }
+
+                        .btn-filter {
+                            padding: 10px 20px;
+                            font-size: 15px;
+                            background-color: rgb(47, 0, 189);
+                            color: white;
+                            cursor: pointer;
+                            border-radius: 10px;
+
+                            &:hover {
+                                background-color: rgb(63, 3, 244);
+
+                            }
+                        }
+
+                        .btn-undo {
+                            padding: 10px 20px;
+                            font-size: 15px;
+                            background-color: green;
+                            color: white;
+                            cursor: pointer;
+                            border-radius: 10px;
+
+                            &:hover {
+                                background-color: rgb(0, 219, 0);
+
+                            }
+                        }
+                    }
+
+                    .tool-content-card {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 10px;
+                        width: 100%;
+
+                        b {
+                            font-size: 17px;
+                        }
+
+                        .select-card {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+
+                            i {
+                                &.fa-address-card {
+                                    font-size: 45px;
+                                    padding-left: 10px;
+                                }
+                            }
+
+                            select {
+                                width: 80%;
+                                padding: 10px 20px;
+                                font-size: 15px;
+                                border-radius: 10px;
+                                border: 1px solid rgba(0, 0, 0, 0.311);
+                                outline: none;
+                            }
+
+                            img {
+                                cursor: pointer;
+                                margin-left: 10px;
+                                width: 20%;
+                            }
+
+                            i {}
+                        }
+                    }
+
+                    .tool-content-btn {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 10px;
+                        width: 100%;
+                        margin-top: 10px;
+
+                        .btn-filter {
+                            text-align: center;
+                            width: 50%;
+                            padding: 10px 0px;
+                            font-size: 15px;
+                            background-color: rgb(47, 0, 189);
+                            color: white;
+                            cursor: pointer;
+                            border-radius: 10px;
+                            font-size: 20px;
+
+                            &:hover {
+                                background-color: rgb(63, 3, 244);
+
+                            }
+                        }
+
+                        .btn-undo {
+                            text-align: center;
+                            width: 50%;
+                            padding: 10px 0px;
+                            font-size: 15px;
+                            background-color: green;
+                            color: white;
+                            cursor: pointer;
+                            border-radius: 10px;
+                            font-size: 20px;
+
+                            &:hover {
+                                background-color: rgb(0, 219, 0);
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .schedule-table {
+                width: 100%;
+                padding: 0px;
+                margin-top: 10px;
+
+                .schedule-sub {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 20px;
+
+                    .schedule-content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 100%;
+                        background-color: white;
+                        border-radius: 20px;
+                        border: 1px solid #e6e6ff;
+                        padding: 15px;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                        .content-s-card {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: flex-start;
+                            width: 100%;
+                            gap: 10px;
+
+                            img {
+                                width: 60px;
+                                height: 40px;
+                            }
+                        }
+
+                        .content-s {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: flex-start;
+                            width: 100%;
+                            gap: 10px;
+
+                            span {
+                                color: #5b15ff;
+                            }
+                        }
+
+                        .content-tool {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            gap: 10px;
+                            margin-top: 10px;
+
+                            .all {
+                                width: 100%;
+                                padding: 10px 0px;
+                                background-color: #5b15ff;
+                                font-size: 25px;
+                                text-align: center;
+                                color: #fff;
+                                border-radius: 10px;
+                            }
+
+                            .one {
+                                width: 50%;
+                                padding: 10px 0px;
+                                background-color: #ff8615;
+                                font-size: 25px;
+                                text-align: center;
+
+                                a {
+                                    color: #fff !important;
+                                }
+
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .schedule-show-info {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.447);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        padding-left: 0px;
+        padding-top: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .schedule-show-info-content {
+            width: 95%;
+            max-width: 550px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 10px;
+
+            .sub-info-title {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+
+                b {
+                    font-size: 20px;
+                    color: rgb(0, 0, 160);
+                }
+
+                i {
+                    color: red;
+                    cursor: pointer;
+                    font-size: 30px;
+
+                    &:hover {
+                        color: rgb(169, 0, 0);
+                    }
+                }
+            }
+
+            .sub-info-content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+
+                b {
+                    font-weight: 16px;
+                }
+
+                span {
+                    color: red;
+
+                }
+            }
+        }
+    }
+
+}

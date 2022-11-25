@@ -1,0 +1,529 @@
+@media only screen and (max-width: 1200px) {
+
+    .content-left,
+    .content-right {
+        display: none;
+    }
+
+    .content-account-mobile {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+
+        .box-user-banner {
+            width: 100%;
+            background-color: white;
+            border-radius: 20px;
+            border: 1px solid #e6e6ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            gap: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            .user-img {
+                label {
+                    cursor: pointer;
+
+                    img {
+                        width: 75px;
+                        height: 75px;
+                        border-radius: 100%;
+                        border: 2px solid #00b994;
+                    }
+                }
+
+            }
+
+            .user-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                gap: 15px;
+
+                .info-text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .user-name {
+                        font-weight: bold;
+                        font-size: 15px;
+                    }
+
+                    .user-intro {}
+                }
+
+                .info-link {
+                    height: 30%;
+                    display: flex;
+                    padding-top: 5px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    .user-link {
+                        cursor: pointer;
+
+                        i {
+                            width: 20px;
+                        }
+
+                        font-size: 13px;
+                    }
+
+                    .user-qrcode {
+                        cursor: pointer;
+
+                        font-size: 13px;
+
+                        i {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content-right-view {
+            width: 100%;
+            // border: 1px solid blue;
+
+            .box-user-view {
+                padding: 20px;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                border: 1px solid #e6e6ff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                .view-title {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                .view-number {
+                    font-weight: bold;
+                    font-size: 40px;
+                    color: #00b994;
+                }
+
+                i {
+                    font-size: 50px;
+                    color: orange;
+                    height: 60px;
+                }
+
+                .btn-hide {
+                    cursor: pointer;
+                    width: 70%;
+                    font-size: 17px;
+                    text-align: center;
+                    padding: 10px 20px;
+                    color: white;
+                    border-radius: 10px;
+                    background-color: #6a2afe;
+                    border-color: #6a2afe;
+
+                    &:hover {
+                        background-color: #5722d1;
+                    }
+                }
+            }
+        }
+
+        .content-left-body {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 30px;
+            width: 100%;
+
+            .left-body-form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+
+                .content-left-menu {
+                    // border: 1px solid #5722d1;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    .left-menu-sub {
+                        cursor: pointer;
+                        font-size: 15px;
+                        padding: 10px;
+                        background-color: white;
+                        border: 1px solid #e6e6ff;
+                        border-radius: 10px;
+                        text-align: center;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                        &.active {
+                            background-color: #1f1760;
+                            color: white;
+                        }
+                    }
+                }
+
+                .content-left-form {
+                    display: none;
+
+                    &.active {
+                        width: 100%;
+                        background-color: white;
+                        border-radius: 20px;
+                        border: 1px solid #e6e6ff;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding: 15px;
+                        gap: 20px;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                        .form-name {
+                            font-size: 25px;
+                            font-weight: bold;
+                        }
+
+                        .form-body {
+                            width: 100%;
+
+                            .form-content {
+                                width: 100%;
+
+                                .form-content-title {
+                                    color: #6c757d;
+
+                                    span {
+                                        cursor: pointer;
+                                        color: blue;
+
+                                        &:hover {
+                                            color: red;
+                                        }
+                                    }
+                                }
+
+                                .form-content-input {
+                                    width: 100%;
+                                    padding: 10px 0px;
+
+                                    input {
+                                        border: 1px solid #6c757d;
+                                        outline: none;
+                                        background-color: white;
+                                        width: 100%;
+                                        height: 50px;
+                                        font-size: 17px;
+                                        padding: 5px 30px;
+                                        border-radius: 10px;
+                                    }
+
+                                    textarea {
+                                        border: 1px solid #6c757d;
+                                        outline: none;
+                                        background-color: white;
+                                        width: 100%;
+                                        font-size: 17px;
+                                        padding: 5px 30px;
+                                        border-radius: 10px;
+                                    }
+
+                                    .sex {
+                                        width: 100%;
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        gap: 20px;
+                                        font-size: 15px;
+                                        cursor: pointer;
+                                        padding: 10px 30px;
+                                        border-radius: 10px;
+                                        border: 1px solid #6c757d;
+
+                                        .sex-content {
+                                            opacity: 0.1;
+
+                                            &:hover {
+                                                opacity: 1;
+                                                color: #6a2afe;
+                                            }
+
+                                            i {
+                                                width: 20px;
+                                            }
+
+                                            &.active {
+                                                opacity: 1;
+
+                                                &.lock {
+                                                    &:hover {
+                                                        color: black;
+                                                        opacity: 1;
+                                                    }
+                                                }
+                                            }
+
+                                            &.lock {
+                                                &:hover {
+                                                    color: black;
+                                                    opacity: 0.1;
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                    &.lock {
+
+                                        input,
+                                        textarea,
+                                        .sex {
+                                            background-color: #e6e6ff;
+                                        }
+                                    }
+
+
+
+                                }
+
+                                .form-content-status {
+                                    color: red;
+                                    font-size: 13px;
+                                }
+                            }
+
+                            .form-lock {
+                                padding-top: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+
+                                .lock-icon {
+                                    margin-bottom: 20px;
+                                    color: gold;
+
+                                    i {
+                                        font-size: 50px;
+                                    }
+
+                                    &.on {
+                                        color: #00b994;
+                                    }
+                                }
+
+                                .lock-title {
+                                    font-size: 30px;
+                                    color: gold;
+
+                                    &.on {
+                                        color: #00b994;
+                                    }
+
+                                    margin-bottom: 30px;
+                                }
+
+                                .btn-lock {
+                                    margin: 10px auto;
+                                    cursor: pointer;
+                                    width: 270px;
+                                    background-color: #00b994;
+                                    padding: 10px 30px;
+                                    font-size: 20px;
+                                    color: white;
+                                    border-radius: 10px;
+                                    text-align: center;
+
+                                    i {
+                                        width: 40px;
+                                    }
+
+                                    &.on {
+                                        background-color: gold;
+
+                                        &:hover {
+                                            background-color: rgb(155, 132, 3);
+                                        }
+                                    }
+
+                                    &:hover {
+                                        background-color: #026f59;
+                                    }
+                                }
+
+                                .resent-email {
+                                    cursor: pointer;
+
+                                    span {
+                                        color: blue;
+
+                                        &:hover {
+                                            color: red;
+                                        }
+                                    }
+                                }
+
+                                .warning {
+                                    padding: 20px 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .form-save {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    button {
+                        border: none;
+                        outline: none;
+                        background-color: transparent;
+                        width: 100%;
+                        padding: 0px;
+
+                        .btn-save {
+                            border: none;
+                            outline: none;
+                            font-weight: bold;
+                            color: white;
+                            font-size: 20px;
+                            cursor: pointer;
+                            width: 100%;
+                            background-color: #4e13d5;
+                            border-color: #4e13d5;
+                            text-align: center;
+                            padding: 10px 20px;
+                            border-radius: 10px;
+                            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .content-left-menu-news {
+            // border: 1px solid #5722d1;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            width: 100%;
+
+            .left-menu-sub-news {
+                cursor: pointer;
+                font-size: 15px;
+                padding: 10px;
+                background-color: white;
+                border: 1px solid #e6e6ff;
+                border-radius: 15px;
+                text-align: center;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                width: 50%;
+
+                &.active {
+                    background-color: #1f1760;
+                    color: white;
+                }
+            }
+        }
+
+        .left-body-report {
+            width: 100%;
+            background-color: white;
+            border-radius: 20px;
+            border: 1px solid #e6e6ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px 25px;
+            gap: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            .report-title {
+                font-size: 20px;
+                font-weight: bold;
+                color: #1f1760;
+            }
+
+            .report-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                .report-content {
+                    padding: 10px 0px;
+                }
+            }
+        }
+
+        .content-right-newfeed {
+            width: 100%;
+            // border: 1px solid blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+
+            .box-newfeed {
+                padding: 20px;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                border: 1px solid #e6e6ff;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 10px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                .newfeed-title {
+                    width: 100%;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                .newfeed-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+
+                    .newfeed-content {
+                        padding: 10px 0px;
+                    }
+                }
+
+            }
+        }
+    }
+}

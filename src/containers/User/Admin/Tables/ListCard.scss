@@ -1,0 +1,444 @@
+.list-card {
+    width: 100%;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 20px 10px 10px;
+    gap: 10px;
+
+    .review-card {
+        width: 100%;
+        padding: 20px 20px 50px 20px;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border: 1px solid #e6e6ff;
+        gap: 10px;
+
+        .review-title {
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .review-render {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-top: 20px;
+
+            #card-custom-size,
+            .card-custom-size {
+                width: 440px;
+                height: 290px;
+                background: url('../../../../assets/card-shadow.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+                padding: 20px;
+
+                // .card-background-x {
+                //     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                //     width: 100%;
+                //     height: 100%;
+                //     background: linear-gradient(100deg, #4FACFE, #fff, #00F2FE);
+                //     border-radius: 10px;
+                //     display: flex;
+                //     flex-direction: column;
+                //     padding: 20px;
+
+                //     .card-header-x {
+                //         display: flex;
+                //         flex-direction: row;
+                //         width: 100%;
+                //         align-items: flex-start;
+                //         justify-content: flex-start;
+                //         gap: 10px;
+                //         height: 50%;
+
+                //         #avt {
+                //             width: 70px;
+                //             height: 70px;
+                //             border-radius: 10px;
+                //         }
+
+                //         .name-intro {
+                //             display: flex;
+                //             flex-direction: column;
+                //             justify-content: center;
+                //             align-items: flex-start;
+                //             gap: 5px;
+
+                //             #name {
+                //                 font-weight: bold;
+                //             }
+
+                //             #intro {
+                //                 font-size: 13px;
+                //             }
+                //         }
+                //     }
+
+                //     .card-footer-x {
+                //         height: 50%;
+                //         width: 100%;
+                //         display: flex;
+                //         flex-direction: row;
+                //         justify-content: space-between;
+                //         align-items: flex-end;
+                //         gap: 10px;
+
+                //         #logo {
+                //             height: 40px;
+                //         }
+
+                //         #qrcode {
+                //             height: 70px;
+                //             border-radius: 10px;
+                //         }
+                //     }
+                // }
+            }
+        }
+
+    }
+
+    .tool-card {
+        width: 100%;
+        // border: 1px solid gold;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .card-title {
+            margin-left: 50px;
+            margin-bottom: 0px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .card-select {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+
+            select {
+                width: 300px;
+                padding: 10px 20px;
+                font-size: 15px;
+                outline: none;
+                border: 1px solid rgb(139, 139, 139);
+                border-radius: 10px;
+            }
+
+            .btn-new {
+                cursor: pointer;
+                font-size: 22px;
+                padding: 4px 15px;
+                background-color: rgb(1, 140, 93);
+                border: 1px solid rgb(1, 86, 58);
+                border-radius: 10px;
+                color: white;
+
+                &:hover {
+                    background-color: rgb(2, 206, 138);
+
+                }
+            }
+        }
+    }
+
+    .custom-card {
+        width: 100%;
+        border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px;
+        background-color: white;
+        border-radius: 20px;
+        border: 1px solid #e6e6ff;
+
+        .custom-name {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+
+            .card-name-input {
+                .input-name {
+                    width: 300px;
+                    padding: 10px 20px;
+                    font-size: 15px;
+                    outline: none;
+                    border: 1px solid rgb(139, 139, 139);
+                    border-radius: 10px;
+                }
+            }
+
+            .card-name-tool {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+
+                .btn-save {
+                    cursor: pointer;
+                    font-size: 22px;
+                    padding: 4px 15px;
+                    background-color: rgb(1, 140, 93);
+                    border: 1px solid rgb(1, 86, 58);
+                    border-radius: 10px;
+                    color: white;
+
+                    &:hover {
+                        background-color: rgb(2, 206, 138);
+
+                    }
+                }
+
+                .btn-del {
+                    cursor: pointer;
+                    font-size: 22px;
+                    padding: 4px 10px;
+                    background-color: rgb(217, 7, 7);
+                    border: 1px solid rgb(86, 1, 1);
+                    border-radius: 10px;
+                    color: white;
+
+                    &:hover {
+                        background-color: rgb(254, 67, 67);
+
+                    }
+                }
+
+                .btn-redo {
+                    cursor: pointer;
+                    font-size: 22px;
+                    padding: 4px 10px;
+                    background-color: rgb(217, 108, 7);
+                    border: 1px solid rgb(86, 32, 1);
+                    border-radius: 10px;
+                    color: white;
+
+                    &:hover {
+                        background-color: rgb(242, 143, 50);
+
+                    }
+                }
+
+                .btn-rendering {
+                    cursor: pointer;
+                    font-size: 22px;
+                    padding: 4px 10px;
+                    background-color: rgb(0, 0, 0);
+                    border: 1px solid rgb(1, 25, 86);
+                    border-radius: 10px;
+                    color: white;
+                    opacity: 0.3;
+
+                    &:hover {
+                        background-color: rgb(48, 147, 240);
+                        opacity: 1;
+                    }
+
+                    &.active {
+                        background-color: rgb(48, 147, 240);
+                        opacity: 1;
+                    }
+                }
+
+                .btn-render {
+                    cursor: pointer;
+                    font-size: 22px;
+                    padding: 4px 10px;
+                    background-color: rgb(0, 0, 0);
+                    border: 1px solid rgb(1, 25, 86);
+                    border-radius: 10px;
+                    color: white;
+                    opacity: 0.3;
+
+                    &.active {
+                        background-color: rgb(48, 147, 240);
+                        opacity: 1;
+
+                        &:hover {
+                            background-color: rgb(35, 2, 180);
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .btn-review-hide {
+                    cursor: pointer;
+                    font-size: 22px;
+                    padding: 4px 10px;
+                    background-color: rgb(0, 0, 0);
+                    border: 1px solid rgb(79, 86, 1);
+                    border-radius: 10px;
+                    color: white;
+                    opacity: 0.3;
+
+                    &.active {
+                        background-color: rgb(48, 147, 240);
+                        opacity: 1;
+
+                        &:hover {
+                            background-color: rgb(35, 2, 180);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .code-doc {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px 10px;
+
+            .doc-copy {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 35%;
+                height: 100%;
+                padding-left: 30px;
+
+                .doc-copy-title {
+                    font-size: 17px;
+                    font-weight: bold;
+                    padding-bottom: 5px;
+                }
+
+                .sub-doc {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    b {
+                        color: red;
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        margin-right: 5px;
+                    }
+
+                    i {
+                        cursor: pointer;
+
+                        &:hover {
+                            color: rgb(0, 198, 0);
+                        }
+                    }
+                }
+            }
+
+            .doc-img {
+                width: 25%;
+                height: 100%;
+                text-align: center;
+                cursor: pointer;
+
+                span {
+                    font-weight: bold;
+                }
+
+                img {
+                    width: 100%;
+                    padding-bottom: 5px;
+                }
+            }
+
+            .doc-err {
+                width: 40%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 5px;
+                padding-top: 5px;
+                padding-left: 20px;
+                // border-left: 1px solid black;
+
+                .err-title {
+                    font-size: 17px;
+                    font-weight: bold;
+                }
+
+                span {
+                    // padding-left: 20px;
+                    color: red;
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+
+        }
+
+        .custom-code {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .code-html {
+                width: 50%;
+                padding: 10px;
+
+                textarea {
+                    border-radius: 10px;
+                    outline: none;
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+
+            .code-css {
+                width: 50%;
+                padding: 10px;
+                border-radius: 10px;
+
+                textarea {
+                    border-radius: 10px;
+                    outline: none;
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

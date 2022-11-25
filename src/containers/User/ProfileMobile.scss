@@ -1,0 +1,342 @@
+@media only screen and (max-width: 1200px) {
+    .profile {
+        width: 100%;
+        min-width: 100%;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f0f1f3;
+        padding-bottom: 50px;
+
+        .cover {
+            width: 100%;
+            height: 10px;
+
+            .cover-color {
+                height: 500px;
+                background-color: #4e13d5;
+            }
+
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 30px;
+            position: fixed;
+            top: 0px;
+
+            .logo {
+                img {
+                    height: 50px;
+                }
+            }
+
+            .tool {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 15px;
+
+                .tool-user {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+
+                    .sign-in {
+                        width: 110px;
+                        text-align: center;
+                        padding: 10px 20px;
+                        background-color: rgb(2, 151, 31);
+                        color: white;
+                        border-radius: 20px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: rgb(0, 185, 37);
+                        }
+                    }
+
+                    .sign-up {
+                        width: 110px;
+                        text-align: center;
+                        padding: 10px 20px;
+                        background-color: rgb(2, 54, 151);
+                        color: white;
+                        border-radius: 20px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: rgb(2, 68, 190);
+                        }
+                    }
+                }
+
+                .tool-language {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    border-radius: 10px;
+                    border: 1px solid red;
+                    padding: 7px 20px;
+                    font-weight: bold;
+
+                    .icon {}
+
+                    .language {
+                        opacity: 0.1;
+                        cursor: pointer;
+
+                        &.active {
+                            opacity: 1;
+                            color: rgb(4, 0, 255);
+                        }
+                    }
+                }
+            }
+        }
+
+        .body-lock {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            max-width: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start !important;
+            padding-top: 150px;
+
+            .box-banned {
+                width: 90% !important;
+                background-color: white;
+                border-radius: 20px;
+                border: 1px solid #e6e6ff;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 20px 30px 30px;
+                box-shadow: 0 8px 8px 0 rgba(103, 151, 255, .11), 0 12px 18px 0 rgba(103, 151, 255, .11);
+
+                .title-banned {
+                    text-align: center;
+                    font-weight: bold;
+                    color: red;
+                    font-size: 20px;
+                }
+
+                .icon-banned {
+                    font-size: 150px;
+                    color: gold;
+                    opacity: 1;
+                }
+
+                .btn-banned {
+                    font-size: 25px;
+                    color: white;
+                    background-color: #4e13d5;
+                    padding: 5px 30px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    text-align: center;
+                    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
+
+                    &:hover {
+                        background-color: #5b15ff;
+
+                    }
+                }
+            }
+        }
+
+        .body-active {
+            width: 100%;
+            max-width: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px !important;
+
+            .body-profile {
+                width: 100%;
+                background-color: white;
+                border-radius: 20px;
+                border: 1px solid #e6e6ff;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 20px !important;
+                box-shadow: 0 8px 8px 0 rgba(103, 151, 255, .11), 0 12px 18px 0 rgba(103, 151, 255, .11);
+
+                .profile-header {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start !important;
+                    gap: 20px;
+
+                    .header-info {
+                        width: 100% !important;
+                        display: flex;
+                        flex-direction: column !important;
+                        justify-content: flex-start !important;
+                        align-items: flex-start;
+                        gap: 20px;
+                        padding-top: 10px;
+
+                        .header-img {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            width: 100%;
+
+                            img {
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 100%;
+                                border: 2px solid red;
+
+                                &.vip {
+                                    border: 2px solid rgb(2, 203, 2);
+                                }
+                            }
+                        }
+
+                        .header-content {
+                            width: 100%;
+
+                            .name {
+                                font-weight: bold;
+                                font-size: 20px;
+                            }
+
+                            .intro {
+                                font-size: 17px;
+                            }
+
+                            .warning {
+                                padding-top: 5px;
+                                font-size: 12px;
+
+                                &.free {
+                                    color: red;
+                                }
+
+                                &.vip {
+                                    color: green;
+                                }
+                            }
+                        }
+                    }
+
+                    .header-qrcode {
+                        width: 20%;
+                        height: 100%;
+                        position: absolute;
+                        right: 40px;
+
+                        img {
+                            width: 100px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .profile-content {
+                    width: 100%;
+                    max-width: 100%;
+                    padding-top: 15px !important;
+
+                    .body-menu {
+                        display: none !important;
+                    }
+
+                    .body-menu-mobile {
+                        display: flex;
+                        width: 100%;
+                        flex-direction: row;
+                        padding-top: 10px;
+
+                        select {
+                            width: 100%;
+                            padding: 10px 20px;
+                            outline: none;
+                            font-weight: bold;
+                            font-size: 16px;
+                            border-radius: 10px 10px 0px 0px;
+                            border: 2px solid #dddddd;
+                            background-color: #f0f0fb;
+                        }
+                    }
+
+                    .body-table {
+                        width: 100%;
+                        background-color: #f0f0fb;
+                        border-radius: 0px 0px 10px 10px !important;
+                        padding: 20px 0px;
+
+                        .table-content {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 20px;
+                            padding: 15px !important;
+
+                            .info-item {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 10px !important;
+                                width: 100%;
+                                max-width: 400px;
+                                background-color: #ffffff;
+                                border-radius: 40px;
+                                gap: 30px;
+                                box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
+                                cursor: pointer;
+
+                                .item-image {
+                                    img {
+                                        width: 60px !important;
+                                        height: 60px !important;
+                                        border-radius: 100%;
+                                        border: 3px solid #ffffff;
+                                    }
+
+                                    i {
+                                        font-size: 50px;
+                                        padding: 10px;
+                                    }
+                                }
+
+                                .item-name {
+                                    font-weight: bold;
+                                    font-size: 16px !important;
+                                }
+
+                                .item-icon {
+                                    font-size: 35px !important;
+                                }
+
+                                &:hover {
+                                    background-color: #12009cb3;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

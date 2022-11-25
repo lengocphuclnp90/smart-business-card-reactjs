@@ -1,0 +1,105 @@
+.verifi {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f6fb;
+    padding-top: 90px;
+
+    .verifi-box {
+        width: 95%;
+        max-width: 500px;
+        background-color: white;
+        border-radius: 20px;
+        border: 1px solid #e6e6ff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .title {
+            font-size: 25px;
+            font-weight: bold;
+
+            &.err {
+                color: red;
+            }
+
+            &.warning {
+                color: orange;
+            }
+        }
+
+        .icon {
+            font-size: 120px;
+            color: #00b994;
+
+            &.err {
+                color: red;
+            }
+
+            &.warning {
+                color: orange;
+            }
+        }
+
+        .input-content {
+            width: 100%;
+            padding: 10px 20px;
+
+            textarea {
+                width: 100%;
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.433);
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            .update-content-input {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 10px;
+
+                b {
+                    font-size: 15px;
+                }
+
+                input {
+                    width: 100%;
+                    outline: none;
+                    border-radius: 10px;
+                    border: 1px solid #291e81;
+                    padding: 10px 20px;
+                }
+            }
+        }
+
+        .btn {
+            cursor: pointer;
+            background-color: #3b2ab8;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 50px;
+            margin-top: 20px;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: #291e81;
+            }
+        }
+    }
+}
